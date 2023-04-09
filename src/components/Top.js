@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 function Top() {
     const [cryptoArr, setCryptoArr] = useState([]);
+    
+    const fetchData =()=>{
+        fetch("http://api.coinlore.net/api/tickers/").then(response =>{
+            return respone.json();
+        })
+    }
 
     return (
         <div className='top-container'>
